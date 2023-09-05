@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<div id="container">
+
+    <table>
+        {% for i in range(0, x) %}
+        <tr>
+            {% for j in range(0, y) %}
+                {% if (i + j) % 2 == 0 %}
+                    <td class="color1" style="background-color: {{ first_color }};"></td>
+                {% else %}
+                    <td class="color2" style="background-color: {{ second_color }};"></td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    
+</div>
+{% endblock %}

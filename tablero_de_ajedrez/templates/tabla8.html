@@ -1,0 +1,23 @@
+
+
+{% extends "base.html" %}
+
+{% block title %}Tabla 8x8{% endblock %}
+
+{% block content %}
+    <div id="container">
+        <table>
+            {% for x in range(0, 8) %}
+            <tr>
+                {% for y in range(0, 8) %}
+                    {% if (x + y) % 2 == 0 %}
+                        <td class="color1"></td>
+                    {% else %}
+                        <td class="color2"></td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

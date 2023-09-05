@@ -1,0 +1,31 @@
+*{
+    margin: auto;
+    padding: 10px;
+}
+h1 {
+    color: yellow;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    width:fit-content;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.color1 {
+    display: flexbox;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+}
+
+.color2 {
+    display: flexbox;
+    background-color: yellow;
+    height: 50px;
+    width: 50px;
+}
