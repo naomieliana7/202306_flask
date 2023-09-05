@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1{
+            color: blue;
+            display: flex;
+            justify-content: center;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .caja{
+            justify-content: center;
+            display: inline-block;
+            margin: 20px;
+            height: 100px;
+            width: 100px;
+            ;
+            border: 2px solid black;
+            border-radius: 10px;
+            
+        }
+    </style>
+    <title>Play</title>
+</head>
+    <body>
+        <h1>Welcome!</h1>
+
+        <div id="container">
+            {% for x in range(0,cantidad) %}
+                <div class="caja" style="background-color: {{ color }};"></div>
+
+            {% endfor %}
+
+        </div>
+    </body>
+    
+</html>
