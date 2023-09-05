@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block content %}
+<div>
+    <table id="tabla">
+        <tr >
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nombre Completo</th>
+        </tr>
+        
+        {% for user in users%}
+            <tr>
+                <td>{{user['first_name']}}</td>
+                <td>{{user['last_name']}}</td>
+                <td>{{user['first_name']}} {{user['last_name']}}</td>
+            </tr>    
+        {% endfor %}
+        
+    </table>
+</div>
+{% endblock %}
