@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Encuesta de Dojo{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="border border-4 border-secondary mt-3 pt-4">
+        <form action="/guardar_datos" method="post">
+            <h4 class="col mb-3">Encuesta de Dojo</h4>
+            <div class="col mb-3">
+                <label for="input" class="form-label">Nombre</label>
+                <input type="text" name="nombre" class="form-control" aria-label="Nombre">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="inputState" class="form-label">Ubicación del Dojo</label>
+                <select id="inputState" name="ubicacion" class="form-select">
+                    <option selected>--Selecciona una ubicación--</option>
+                    <option>Chicago</option>
+                    <option>Seattle</option>
+                    <option>Online</option>
+                    <option>Burnbank</option>
+                    <option>Bellevue</option>
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="inputState" class="form-label">Lenguaje Favorito</label>
+                <select id="inputState" name="lenguaje" class="form-select">
+                    <option selected>--Selecciona un lenguaje--</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                    <option>C#</option>
+                </select>
+            </div>
+
+
+            <div class="col mb-3">
+                <label for="floatingTextarea2">Comentario (Opcional)</label>
+                <textarea class="form-control" name="comentario" id="floatingTextarea2"
+                    style="height: 80px; resize:none;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary float-right mb-2 mr-3">Botón</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

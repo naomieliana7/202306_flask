@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Encuesta de Dojo{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container text-left border border-secondary border-4 rounded p-3 mt-3" style="width: 400px;">
+        <h5 class="col mb-3 mt-3"><u>Información enviada</u></h5>
+        <div class="col-md-8">
+            <table>
+                {% for dato in datos %}
+                <tr>
+                    <td class="pr-3">Nombre:</td>
+                    <td>{{dato['nombre']}}</td>
+                </tr>
+                <tr>
+                    <td class="pr-3">Ubicación:</td>
+                    <td>{{dato['ubicacion']}}</td>
+                </tr>
+                <tr>
+                    <td class="pr-3">Lenguaje:</td>
+                    <td>{{dato['lenguaje']}}</td>
+                </tr>
+                <tr>
+                    <td class="pr-3">Comentario:</td>
+                    <td>{{dato['comentario']}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <a href="/" class="btn btn-primary float-right mb-2">Regresa</a>
+    </div>
+</div>
+
+{% endblock %}
